@@ -1,14 +1,16 @@
 {% extends 'todo/base.html' %}
 
 {% block content %}
-    <h1>Todo List</h1>
+    <br>
+    <h1>ยินดีต้อนรับสู่เวปไซต์</h1>
+    <h1>Lab 3SB04 Web App Framework II (Django)</h1>
 
     {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
     <form action="{% url 'todo:create' %}" method="post">
         {% csrf_token %}
         <!-- Todo Name -->
         <div class="form-group">
-            <label for="todo" class="col-sm-3 control-label">Todo</label>
+            <label for="todo" class="col-sm-3 control-label">เขียนกระทู้</label>
             <div class="col-sm-6">
                 {{ form.body }}
             </div>
@@ -18,7 +20,7 @@
         <div class="form-group">
             <div class="col-sm-offset-3 col-sm-6">
                 <button type="submit" class="btn btn-default">
-                    <i class="fa fa-plus"></i> Add Todo
+                    <i class="fa fa-plus"></i> ยืนยัน
                 </button>
             </div>
         </div>
@@ -27,10 +29,10 @@
     
 
     <!-- Current Todos -->
-    <h2>Current Todos</h2>
+    <h2>อ่านกระทู้</h2>
     <table class="table table-striped todo-table">
         <thead>
-            <th>Todos</th><th>&nbsp;</th>
+            <th>"โปรดใช้วิจารณญาณในการอ่าน"</th><th>&nbsp;</th>
         </thead>
 
         <tbody>
